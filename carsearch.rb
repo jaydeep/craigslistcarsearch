@@ -4,16 +4,16 @@ def create_query
   options = {}
 
   puts "Minimum year?"
-  auto_min_year = gets.chomp.to_i
+  options[:autoMinYear] = gets.chomp.to_i
 
   puts "Maximum year?"
-  auto_max_year = gets.chomp.to_i
+  options[:autoMaxYear] = gets.chomp.to_i
 
   puts "Minimum price?"
-  min_price = gets.chomp.to_i
+  options[:minAsk] = gets.chomp.to_i
 
   puts "Maximum price?"
-  max_price = gets.chomp.to_i
+  options[:maxAsk] = gets.chomp.to_i
 
   puts "What country of manufacturing?"
   puts "Your options are: japan | america | korea | europe"
