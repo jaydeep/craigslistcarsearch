@@ -3,7 +3,20 @@ require 'addressable/uri'
 def create_query
   options = {}
 
+  puts "Minimum year?"
+  auto_min_year = gets.chomp.to_i
+
+  puts "Maximum year?"
+  auto_max_year = gets.chomp.to_i
+
+  puts "Minimum price?"
+  min_price = gets.chomp.to_i
+
+  puts "Maximum price?"
+  max_price = gets.chomp.to_i
+
   puts "What country of manufacturing?"
+  puts "Your options are: japan | america | korea | europe"
   country = gets.chomp.downcase
   options[:query] = convert_country_to_manufacturer(country)
 
@@ -14,9 +27,10 @@ def create_query
   converted_region = convert_region('') #TODO
 
   puts "What is the seller type?"
+  puts "Your options are: owner | dealer | both"
   seller_type = gets.chomp.downcase
 
-  puts "Only include results with pictures?"
+  puts "Only include results with pictures? [y/n]"
   pictures_req = (['true', 't', 'y', 'yes'].include?(gets.chomp)) ? true : false
 
   converted_seller_type = convert_seller_type ( seller_type )
