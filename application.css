@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+form {
+  text-align: left;
+  border: 1px black solid;
+  padding-left: 10px;
+  font-family: courier;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: Arial;
+}
+
+#about {
+  font-size: 1em;
+  font-family: Arial;
+  color: grey;
+}

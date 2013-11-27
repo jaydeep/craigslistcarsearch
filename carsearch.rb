@@ -16,7 +16,7 @@ def create_query
   options[:maxAsk] = gets.chomp.to_i
 
   puts "What country of manufacturing?"
-  puts "Your options are: japan | america | korea | europe"
+  puts "Your options are: japan | america | korea | europe | any"
   country = gets.chomp.downcase
   options[:query] = convert_country_to_manufacturer(country)
 

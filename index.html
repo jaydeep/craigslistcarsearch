@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Car Search</title>
+    <link href="application.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Craigslist Advanced Car Search Generator</h1>
+    <p id="about">
+      This form generates advanced search queries to make searching for cars on craigslist less painful.
+    </p>
+
+    <form>
+      Seller Type:
+      <label for="seller-type-cto">Owner</label>
+      <input type="radio" id="seller-type-cto" 
+        name="seller-type" value="cto"></input>
+
+      <label for="seller-type-ctd">Dealer</label>
+      <input type="radio" id="seller-type-ctd"
+        name="seller-type" value="ctd"></input>
+
+      <label for="seller-type-cta">Both</label>
+      <input type="radio" id="seller-type-cta"
+        name="seller-type" value="cta"></input>
+      <br><br>
+      <!-- radio button -->
+
+      <!-- min < max && min > 0 -->
+      <!-- also the up thing should increase by 1000 -->
+      <label for="min-year">Minimum Year:</label>
+      <input type="number" id="min-year" name="autoMinYear"></input><br>
+      <label for="max-year">Maximum Year:</label>
+      <input type="number" id="max-year" name="autoMaxYear"></input>
+      <br><br>
+
+      <label for="min-price">Minimum Price:</label>
+      <input type="number" id="min-price" name="minAsk"></input><br>
+      <label for="max-price">Maximum Price:</label>
+      <input type="number" id="max-price" name="maxAsk"></input>
+      <br><br>
+
+      <label for="country-selector">Country of Manufacturing:</label>
+      <br><br>
+      <!-- checkboxes -->
+
+      <label for="adtl-params">Additional Params:</label>
+      <input type="text" id="adtl-params" 
+        name"query" placeholder="-red leather seats"></input>
+      <label for="pic-required">Picture required?</label>
+      <input type="checkbox" id="pic-required" name="hasPic"><br>
+
+      <!-- checkbox/radio button -->
+      </form>
+  </body
+</html>
