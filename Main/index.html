@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+  <head>
+    <title>Advanced Car Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+  </head>
+
+  <body>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/carsearch.js"></script>
+
+    <h1>Craigslist Advanced Car Search Generator</h1>
+    <p id="about">
+      This form generates advanced search queries to make searching for cars on craigslist less painful.
+    </p>
+    
+    <div class="row">
+    <form>
+      <div class="row">
+        <div class="small-12 columns">
+          <!-- make these buttons -->
+          <div class="small-1 columns">
+            <label for="seller-type-cto">Owner</label>
+          </div>
+          <div class="small-1 columns"> 
+            <input type="radio" id="seller-type-cto" 
+              name="seller-type" value="cto">
+          </div>
+
+          <div class="small-1 columns">
+            <label for="seller-type-ctd">Dealer</label>
+          </div>
+          <div class="small-1 columns"> 
+            <input type="radio" id="seller-type-ctd"
+             name="seller-type" value="ctd">
+          </div>
+
+          <div class="small-1 columns"> 
+            <label for="seller-type-cta">Both</label>
+          </div>
+          <div class="small-1 columns"> 
+            <input type="radio" id="seller-type-cta"
+              name="seller-type" value="cta">
+          </div>
+          <div class="small-2 columns"> 
+            <label for="pic-required">Picture required?</label>
+          </div>
+          <div class="small-1 columns"> 
+            <input type="checkbox" id="pic-required" name="hasPic">
+          </div>
+          <div></div>
+        </div>
+
+        <!-- make this nicer looking -->
+
+      </div>
+
+      <div class="row">
+        <div class="small-4 large columns">
+          <div class="small-6 columns">
+            <label for="min-year" class="right inline">Minimum Year:</label>
+          </div>
+          <div class="small-6 columns">
+            <input type="number" id="min-year" name="autoMinYear" step="10" min="1920" max="2014">
+          </div>
+        </div>
+
+        <div class="small-4 large columns">
+          <div class="small-6 columns">
+            <label for="max-year" class="right inline">Maximum Year:</label>
+          </div>
+          <div class="small-6 columns">
+            <input type="number" id="max-year" name="autoMaxYear" step="10" min="1920" max="2014">
+          </div>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="row">
+        <div class="small-4 large columns">
+          <div class="small-6 columns">
+            <label for="min-price" class="right inline">Minimum Price:</label>
+          </div>
+          <div class="small-6 columns">
+            <input type="number" id="min-price" name="minAsk" step="1000" min="0" max="10000000"></input>
+          </div>
+        </div>
+
+        <div class="small-4 large columns">
+          <div class="small-6 columns">
+            <label for="max-price" class="right inline">Maximum Price:</label>
+          </div>
+          <div class="small-6 columns">
+            <input type="number" id="max-price" name="maxAsk" step="1000" min="1000" max="10000000"></input>
+          </div>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="row">
+        <label for="country-selector">Country of Manufacturing:</label>
+        <!-- buttons of countries to include/exclude -->
+
+        <!-- table of selected cars -->
+      </div>
+      <!-- checkboxes -->
+      
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="small-2 columns">
+            <label for="adtl-params">Additional Params:</label>
+          </div>
+          <div class="small-6 columns">
+            <input type="text" id="adtl-params" 
+              name"query" placeholder="-red leather seats"></input>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <!-- checkbox/radio button -->
+      </form>
+    </div>
+
+    <div class="row">
+      <a href="">Your car search awaits :) </a>
+    </div>
+  </body>
+</html>
