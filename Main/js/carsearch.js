@@ -15,13 +15,17 @@ $(function(){
     var country = $(this).attr('data-id');
      $("#" + country + " li a").toggleClass("selected");
   });
+});
 
-  window.getCarMakes = function(){
+var getCarMakes = function(){
     arr = [];
     $(".car-make-list li a.selected").each(function(idx, el) { 
       arr.push($(el).attr('data-id')); 
     });
     return arr;
-  }
-});
+};
+
+var formatCarMakes = function(){
+  return "(" + getCarMakes().join("|") + ")"
+};
 
