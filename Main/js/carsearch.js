@@ -1,7 +1,7 @@
 $(function(){
   $(".radio-button li a").click(function(){
     event.preventDefault();
-    $(".radio-button li addClass.selected").removeClass("selected");
+    $(".radio-button li a.selected").removeClass("selected");
     $(event.target).addClass("selected");
   });
 
@@ -26,6 +26,39 @@ var getCarMakes = function(){
 };
 
 var formatCarMakes = function(){
-  return "(" + getCarMakes().join("|") + ")"
+  return escape("(" + getCarMakes().join("|") + ")")
+};
+
+var customEncoding = function(param){
+  return param.replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/\|/g, "%7C").replace(/\ /g, "%20");
+}
+
+var getURLBase = function() {
+  var sellerType = $(".radio-button li a.selected").attr('data-id');
+  // var region = $("#region").val(); TODO
+  var region = "sfbay"
+
+  return region + ".craigslist.org/search/" + sellerType + "?query="
+} 
+
+var generateSearchString = function(){
+  var carMakes = formatCarMakes();
+  var addtlParams = $("#adtl-params").val();
+  
+  var queryString = customEncoding(carMakes + addtlParams);
+
+  searchParams = {
+    zoomToPosting : "", 
+    minAsk : $("#min-price").val(), 
+    maxAsk : $("#max-price").val(), 
+    autoMinYear : $("#min-year").val(), 
+    autoMaxYear : $("#max-year").val(), 
+  };
+
+  if ($("#pic-required").hasClass("selected")) {
+    searchParams.hasPic = 1;
+  }
+
+  return getURLBase() + queryString + "&" + $.param(searchParams);
 };
 
