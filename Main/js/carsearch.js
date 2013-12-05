@@ -15,6 +15,11 @@ $(function(){
     var country = $(this).attr('data-id');
      $("#" + country + " li a").toggleClass("selected");
   });
+
+  $("#search-button").click(function(){
+    event.preventDefault();
+    window.location.href = generateSearchString();
+  });
 });
 
 var getCarMakes = function(){
@@ -38,7 +43,7 @@ var getURLBase = function() {
   // var region = $("#region").val(); TODO
   var region = "sfbay"
 
-  return region + ".craigslist.org/search/" + sellerType + "?query="
+  return "http://" + region + ".craigslist.org/search/" + sellerType + "?query="
 } 
 
 var generateSearchString = function(){
