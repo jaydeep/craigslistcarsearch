@@ -19,49 +19,214 @@
 
     <h1>Craigslist Advanced Car Search Generator</h1>
     <p id="about">
-      This form generates advanced search queries to make searching for cars on craigslist less painful.
+      This form generates advanced search queries to make searching for cars on 
+      craigslist less painful.
     </p>
-    
+      
     <div class="row">
-    <form>
-      <div class="row">
-        <div class="small-12 columns">
-          <!-- make these buttons -->
-          <div class="small-1 columns">
-            <label for="seller-type-cto">Owner</label>
-          </div>
-          <div class="small-1 columns"> 
-            <input type="radio" id="seller-type-cto" 
-              name="seller-type" value="cto">
-          </div>
-
-          <div class="small-1 columns">
-            <label for="seller-type-ctd">Dealer</label>
-          </div>
-          <div class="small-1 columns"> 
-            <input type="radio" id="seller-type-ctd"
-             name="seller-type" value="ctd">
-          </div>
-
-          <div class="small-1 columns"> 
-            <label for="seller-type-cta">Both</label>
-          </div>
-          <div class="small-1 columns"> 
-            <input type="radio" id="seller-type-cta"
-              name="seller-type" value="cta">
-          </div>
-          <div class="small-2 columns"> 
-            <label for="pic-required">Picture required?</label>
-          </div>
-          <div class="small-1 columns"> 
-            <input type="checkbox" id="pic-required" name="hasPic">
-          </div>
-          <div></div>
-        </div>
-
-        <!-- make this nicer looking -->
-
+      <div class="button-tab">
+        <ul class="radio-button button-group">
+          <li>
+            <a href="#" id="owner" data-id="cto" class="button selected">Owner</a>
+          </li>
+          <li>
+            <a href="#" id="dealer" data-id="ctd" class="button">Dealer</a>
+          </li>
+          <li>
+            <a href="#" id="both" data-id"cta" class="button">Both</a>
+          </li>
+        </ul>
+        <ul class="checkbox button-group">
+          <li><a href="#" id="pic-required" 
+            data-id="hasPic" class="button checkbox">Picture Required?</a></li>
+        </ul>
       </div>
+    </div>
+
+    <div class="row">
+      <ul class="country-selector button-group">
+        <li>
+          <a href="#" id="american" class="button">American</a>
+        </li>
+        <li>
+          <a href="#" id="german" class="button">German</a>
+        </li>
+        <li>
+          <a href="#" id="japanese" class="button">Japanese</a>
+        </li>
+        <li>
+          <a href="#" id="korean" class="button">Korean</a>
+        </li>
+        <li>
+          <a href="#" id="italian" class="button">Italian</a>
+        </li>
+        <li>
+          <a href="#" id="swedish" class="button">Swedish</a>
+        </li>
+        <li>
+          <a href="#" id="british" class="button">British</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="germany" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="audi">Audi</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="bmw">BMW</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="benz">Mercedes-Benz</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="porsche">Porsche</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="vw">Volkswagen</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="america" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="buick">Buick</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="cadillac">Cadillac</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="chevrolet">Chevrolet</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="chrysler">Chrysler</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="dodge">Dodge</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="ford">Ford</a>
+        </li>
+      </ul>
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="gmc">GMC</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="hummer">Hummer</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="jeep">Jeep</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="oldsmobile">Oldsmobile</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="pontiac">Pontiac</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="saturn">Saturn</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="japan" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="acura">Acura</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="honda">Honda</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="infiniti">Infiniti</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="isuzu">Isuzu</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="lexus">Lexus</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="mazda">Mazda</a>
+        </li>
+      </ul>
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="mitsubishi">Mitsubishi</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="nissan">Nissan</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="scion">Scion</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="subaru">Subaru</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="suzuki">Suzuki</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="toyota">Toyota</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="korea" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="hyundai">Hyundai</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="Kia">Kia</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="italy" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="ferrari">Ferrari</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="fiat">Fiat</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="lamborghini">Lamborghini</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="sweden" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="volvo">Volvo</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="saab">Saab</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="britain" class="row">
+      <ul class="car-make-list button-group">
+        <li>
+          <a href="#" class="button large" id="jaguar">Jaguar</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="land-rover">Land Rover</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="lotus">Lotus</a>
+        </li>
+        <li>
+          <a href="#" class="button large" id="mini">Mini</a>
+        </li>
+      </ul>
+    </div>
 
       <div class="row">
         <div class="small-4 large columns">
@@ -69,7 +234,8 @@
             <label for="min-year" class="right inline">Minimum Year:</label>
           </div>
           <div class="small-6 columns">
-            <input type="number" id="min-year" name="autoMinYear" step="10" min="1920" max="2014">
+            <input type="number" id="min-year" name="autoMinYear" 
+              step="10" min="1920" max="2014">
           </div>
         </div>
 
@@ -78,7 +244,8 @@
             <label for="max-year" class="right inline">Maximum Year:</label>
           </div>
           <div class="small-6 columns">
-            <input type="number" id="max-year" name="autoMaxYear" step="10" min="1920" max="2014">
+            <input type="number" id="max-year" name="autoMaxYear" 
+              step="10" min="1920" max="2014">
           </div>
         </div>
         <div></div>
@@ -90,7 +257,8 @@
             <label for="min-price" class="right inline">Minimum Price:</label>
           </div>
           <div class="small-6 columns">
-            <input type="number" id="min-price" name="minAsk" step="1000" min="0" max="10000000"></input>
+            <input type="number" id="min-price" name="minAsk" 
+              step="1000" min="0" max="10000000"></input>
           </div>
         </div>
 
@@ -99,19 +267,12 @@
             <label for="max-price" class="right inline">Maximum Price:</label>
           </div>
           <div class="small-6 columns">
-            <input type="number" id="max-price" name="maxAsk" step="1000" min="1000" max="10000000"></input>
+            <input type="number" id="max-price" name="maxAsk" 
+              step="1000" min="1000" max="10000000"></input>
           </div>
         </div>
         <div></div>
       </div>
-
-      <div class="row">
-        <label for="country-selector">Country of Manufacturing:</label>
-        <!-- buttons of countries to include/exclude -->
-
-        <!-- table of selected cars -->
-      </div>
-      <!-- checkboxes -->
       
       <div class="row">
         <div class="small-12 columns">
@@ -126,7 +287,6 @@
         </div>
       </div>
       <!-- checkbox/radio button -->
-      </form>
     </div>
 
     <div class="row">

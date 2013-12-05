@@ -5,3 +5,19 @@ h1 {
 #about {
   text-align: center;
 }
+
+.selected {
+  background-color: green;
+}
+
+.radio-button .selected {
+  pointer-events: none;
+}
+
+#germany, #japan, #sweden, #italy, #britain {
+  background-color: grey;
+}
+
+#america, #korea, #sweden {
+  background-color: lightgrey;
+}
